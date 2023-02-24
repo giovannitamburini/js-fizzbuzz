@@ -38,6 +38,13 @@ stampa in console "Buzz".
 °stampa il valore della variabile
 */
 
+/*
+----------------------------------------------
+VERSIONE CONSOLE.LOG
+----------------------------------------------
+*/
+
+/*
 let listEl = document.getElementById("list");
 
 // creo il ciclo
@@ -62,5 +69,52 @@ for (let i = 1 ; i <= 100; i++) {
     } else {
 
         console.log(i)
+    }
+}
+
+*/
+
+/*
+-----------------------------------------
+VERSIONE BONUS
+-----------------------------------------
+*/
+
+let listEl = document.getElementById("list");
+
+// creo il ciclo
+for (let i = 1 ; i <= 100; i++) {
+
+    //creo un nuovo elemento HTML
+    let newLiEl = document.createElement('li');
+
+    //appendo all'elemento HTML (ul) il nuovo elemento creato (li)
+    listEl.append(newLiEl);
+
+    //modifico il contenuto dell'elemento creato
+    newLiEl.innerHTML = i;
+
+    // se 'i' divisibile sia per 3 che per 5
+    if (i % 3 == 0 && i % 5 == 0) {
+
+        // modifico il valore interno dell'elemento
+        newLiEl.innerHTML = "FizzBuzz";
+
+    //se "i" divisibile solo per 3   
+    } else if (i % 3 == 0) {
+
+        // modifico il valore interno dell'elemento
+        newLiEl.innerHTML = "Fizz";
+      
+    //se "i" divisibile solo per 5
+    } else if (i % 5 == 0) {
+
+        // modifico il valore interno dell'elemento
+        newLiEl.innerHTML = "Buzz";
+    
+    //se le 3 condizioni precedenti non hanno trovato riscontro
+    } else {
+
+        newLiEl.innerHTML = i;
     }
 }
