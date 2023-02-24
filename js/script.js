@@ -38,3 +38,23 @@ programma così come lo faremmo "a mano"
 
 ?ALTRIMENTI:
 °stampa il valore della variabile
+*/
+
+let listEl = document.getElementById("list");
+
+//modifico il contenuto
+// newLiEl.innerHTML = "elemento"
+
+//appendo al contenitore listEl l'elemento newLiEl
+// listEl.append(newLiEl);
+
+
+// creo il ciclo
+for (let i = 1 ; i <= 100; i++) {
+
+    // devo creare un nuovo elemento HTML
+    // let newLiEl = document.createElement('li');
+
+    // stampo in console i
+    console.log(i)
+}
