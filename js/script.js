@@ -25,16 +25,14 @@ programma così come lo faremmo "a mano"
  indicata non eguaglia il limite che gli abbiamo imposto (=<100).
 
 -all'interno del ciclo pongo diverse condizioni:
-?SE la variabile è divisibile per 3 o per 5:
+?SE la variabile è divisibile sia per 3 che per 5:
+°stampa in console "FizzBuzz";
 
-  ?SE la variabile è divisibile sia per 3 che per 5:
-  °stampa in console "FizzBuzz";
+?ALTRIMENTI SE la variabile è divisibile solo per 3:
+°stampa in console "Fizz";
 
-  ?ALTRIMENTI SE la variabile è divisibile solo per 3:
-  °stampa in console "Fizz";
-
-  ?ALTRIMENTI (la variabile è divisibile solo per 5):
-  stampa in console "Buzz".
+?ALTRIMENTI SE (la variabile è divisibile solo per 5):
+stampa in console "Buzz".
 
 ?ALTRIMENTI:
 °stampa il valore della variabile
@@ -42,19 +40,27 @@ programma così come lo faremmo "a mano"
 
 let listEl = document.getElementById("list");
 
-//modifico il contenuto
-// newLiEl.innerHTML = "elemento"
-
-//appendo al contenitore listEl l'elemento newLiEl
-// listEl.append(newLiEl);
-
-
 // creo il ciclo
 for (let i = 1 ; i <= 100; i++) {
 
-    // devo creare un nuovo elemento HTML
-    // let newLiEl = document.createElement('li');
+    // se 'i' divisibile sia per 3 che per 5
+    if (i % 3 == 0 && i % 5 == 0) {
 
-    // stampo in console i
-    console.log(i)
+        console.log("FizzBuzz");
+
+    //se "i" divisibile solo per 3   
+    } else if (i % 3 == 0) {
+
+        console.log("Fizz");
+      
+    //se "i" divisibile solo per 5
+    } else if (i % 5 == 0) {
+
+        console.log("Buzz")
+    
+    //se le 3 condizioni precedenti non hanno trovato riscontro
+    } else {
+
+        console.log(i)
+    }
 }
