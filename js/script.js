@@ -80,13 +80,14 @@ VERSIONE BONUS
 -----------------------------------------
 */
 
+
 let listEl = document.getElementById("list");
 
 // creo il ciclo
 for (let i = 1 ; i <= 100; i++) {
 
     //creo un nuovo elemento HTML
-    let newLiEl = document.createElement('li');
+    let newLiEl = document.createElement('div');
 
     //appendo all'elemento HTML (ul) il nuovo elemento creato (li)
     listEl.append(newLiEl);
@@ -100,17 +101,23 @@ for (let i = 1 ; i <= 100; i++) {
         // modifico il valore interno dell'elemento
         newLiEl.innerHTML = "FizzBuzz";
 
+        newLiEl.style.backgroundColor = "#f0466f";
+
     //se "i" divisibile solo per 3   
     } else if (i % 3 == 0) {
-
+        
         // modifico il valore interno dell'elemento
         newLiEl.innerHTML = "Fizz";
-      
+
+        newLiEl.style.backgroundColor = "#0cd6a1";
+
     //se "i" divisibile solo per 5
     } else if (i % 5 == 0) {
 
         // modifico il valore interno dell'elemento
         newLiEl.innerHTML = "Buzz";
+
+        newLiEl.style.backgroundColor = "#ffd166";
     
     //se le 3 condizioni precedenti non hanno trovato riscontro
     } else {
@@ -118,3 +125,4 @@ for (let i = 1 ; i <= 100; i++) {
         newLiEl.innerHTML = i;
     }
 }
+

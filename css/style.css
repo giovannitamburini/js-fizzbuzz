@@ -1,0 +1,30 @@
+/* debug */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    background-color: #083b4c;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    background-color: #083b4c;
+}
+
+#list div {
+    width: calc((100% / 7) - (5px / 7 * 6));
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 1.2em;
+}
